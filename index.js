@@ -54,7 +54,7 @@ app.put('/books/:name', async (req, res) => {
     books[index].content = book.content;
     books[index].updateAt = new Date;
 
-    res.status(200).json({ message: "ok", data: { book } });
+    res.status(200).json({ message: "ok", data: { book : books[index] } });
     return;
 });
 
